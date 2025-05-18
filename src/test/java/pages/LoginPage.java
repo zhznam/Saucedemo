@@ -20,6 +20,7 @@ public class LoginPage extends BasePage {
         driver.get(BASE_URL);
     }
 
+    @Step("Ввод данных пользователя")
     public void login(User user) {
         fillLoginInput(user.getEmail());
         fillPasswordInput(user.getPassword());

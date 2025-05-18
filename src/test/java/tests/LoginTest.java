@@ -1,12 +1,14 @@
 package tests;
 
+import io.qameta.allure.*;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import user.UserFactory;
 import static org.testng.Assert.*;
 
 public class LoginTest extends BaseTest {
-    @Test
+
+    @Test(description = "Проверка авторизации")
     public void correctLogin() {
         loginPage.open();
         loginPage.login(UserFactory.withAdminPermission());
