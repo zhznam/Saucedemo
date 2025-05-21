@@ -14,7 +14,7 @@ public class AddCoodsToCartTest extends BaseTest {
     @Owner("Khrol Nat Ser bla@gmail.com")
     @TmsLink("UrnSu")
     @Issue("2")
-    @Test(description="проверяем, что товары добавлены в корзину")
+    @Test(description="Проверка, что товары добавлены в корзину")
     @Flaky
     public void checkCart() {
         loginPage.open();

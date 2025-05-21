@@ -47,9 +47,9 @@ public class BaseTest {
         productPage = new ProductPage(driver);
         cartPage = new CartPage(driver);
 
-        System.setProperty("BASE_URL", PropertyReader.getProperty("saucedemmmo.url"));
-        user = PropertyReader.getProperty("saucedemmmo.user");
-        password = PropertyReader.getProperty("saucedemmmo.password");
+        System.setProperty("BASE_URL", PropertyReader.getProperty("saucedemo.url"));
+        user = PropertyReader.getProperty("saucedemo.user");
+        password = PropertyReader.getProperty("saucedemo.password");
     }
 
     @Step("Закрытие")
