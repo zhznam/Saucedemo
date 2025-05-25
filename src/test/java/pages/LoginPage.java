@@ -1,4 +1,5 @@
 package pages;
+
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,7 +12,6 @@ public class LoginPage extends BasePage {
     private final By error_message = By.xpath("//*[@class='error-message-container error']");
 
     public LoginPage(WebDriver driver) {
-        //this.driver=driver;
         super(driver);
     }
 

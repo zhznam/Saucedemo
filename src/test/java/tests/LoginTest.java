@@ -1,11 +1,8 @@
 package tests;
 
-import enums.DepartmentNaming;
-import io.qameta.allure.*;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import user.UserFactory;
-
 import static enums.DepartmentNaming.PRODUCTS;
 import static org.testng.Assert.*;
 

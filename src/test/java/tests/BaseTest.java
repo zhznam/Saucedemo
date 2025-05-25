@@ -13,7 +13,6 @@ import pages.LoginPage;
 import pages.ProductPage;
 import utils.PropertyReader;
 import utils.TestListener;
-
 import java.util.concurrent.TimeUnit;
 
 @Listeners(TestListener.class)
@@ -40,13 +39,11 @@ public class BaseTest {
             WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
         }
-
         driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
         context.setAttribute("driver", driver);
         loginPage = new LoginPage(driver);
         productPage = new ProductPage(driver);
         cartPage = new CartPage(driver);
-
         System.setProperty("BASE_URL", PropertyReader.getProperty("saucedemo.url"));
         user = PropertyReader.getProperty("saucedemo.user");
         password = PropertyReader.getProperty("saucedemo.password");

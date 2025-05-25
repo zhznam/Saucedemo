@@ -3,16 +3,12 @@ package tests;
 import io.qameta.allure.*;
 import org.testng.annotations.Test;
 import user.UserFactory;
-
 import static org.testng.Assert.*;
 
 public class AddCoodsToCartTest extends BaseTest {
-    @Epic("Модуль логина интернет-магазина")
-    @Feature("Юридические лица")
-    @Story("STG")
+    @Epic("Модуль покупок интернет-магазина")
     @Severity(SeverityLevel.BLOCKER)
-    @Owner("Khrol Nat Ser bla@gmail.com")
-    @TmsLink("UrnSu")
+    @Owner("zorina.e.k9@gmail.com")
     @Issue("2")
     @Test(description="Проверка, что товары добавлены в корзину")
     @Flaky
