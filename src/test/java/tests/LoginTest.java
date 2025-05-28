@@ -10,8 +10,9 @@ public class LoginTest extends BaseTest {
 
     @Test(description = "Проверка авторизации")
     public void correctLogin() {
-        loginPage.open();
-        loginPage.login(UserFactory.withAdminPermission());
+        loginPage
+                .open()
+                .login(UserFactory.withAdminPermission());
         assertTrue(productPage.titleIsDisplayed());
         assertEquals(productPage.getTitle(), PRODUCTS.getDisplayName());
     }
@@ -27,10 +28,11 @@ public class LoginTest extends BaseTest {
 
     @Test(dataProvider = "incorrectLoginData")
     public void incorrectLogin(String user, String pass, String errorMsg) {
-        loginPage.open();
-        loginPage.fillLoginInput(user);
-        loginPage.fillPasswordInput(pass);
-        loginPage.clickBtn();
+        loginPage
+                .open()
+                .fillLoginInput(user)
+                .fillPasswordInput(pass)
+                .clickBtn();
         assertEquals(loginPage.error(), errorMsg);
     }
 }

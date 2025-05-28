@@ -16,8 +16,9 @@ public class LoginPage extends BasePage {
     }
 
     @Step("Открытие браузера")
-    public void open() {
+    public LoginPage open() {
         driver.get(BASE_URL);
+        return this;
     }
 
     @Step("Ввод данных пользователя")
@@ -27,18 +28,25 @@ public class LoginPage extends BasePage {
         clickBtn();
     }
 
-    public void fillLoginInput(String user) {
+    @Step("Ввод логина пользователя")
+    public LoginPage fillLoginInput(String user) {
         driver.findElement(USERNAME_INPUT).sendKeys(user);
+        return this;
     }
 
-    public void fillPasswordInput(String password) {
+    @Step("Ввод пароля пользователя")
+    public LoginPage fillPasswordInput(String password) {
         driver.findElement(PASSWORD_INPUT).sendKeys(password);
+        return this;
     }
 
-    public void clickBtn() {
+    @Step("Авторизация")
+    public LoginPage clickBtn() {
         driver.findElement(LOGIN_BUTTON).submit();
+        return this;
     }
 
+    @Step("Проверка текста в сообщении об ошибке")
     public String error() {
         return driver.findElement(error_message).getText();
     }

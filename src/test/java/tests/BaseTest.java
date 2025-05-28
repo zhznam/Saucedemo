@@ -26,7 +26,7 @@ public class BaseTest {
 
     @Parameters({"browser"})
     @BeforeMethod
-    @Step()
+    @Step("Открытие браузера")
     public void setup(@Optional("chrome") String browser, ITestContext context) {
         if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
@@ -49,7 +49,7 @@ public class BaseTest {
         password = PropertyReader.getProperty("saucedemo.password");
     }
 
-    @Step("Закрытие")
+    @Step("Закрытие браузера")
     @AfterMethod()
     public void close() {
         driver.quit();

@@ -34,13 +34,15 @@ public class ProductPage extends BasePage{
     }
 
     @Step ("Добавление товара в корзину")
-    public void addToCart(int index){
+    public ProductPage addToCart(int index){
         driver.findElements(ADD_TO_CART_BUTTON).get(index).click();
+        return this;
     }
 
     @Step("Ожидание прогрузки карточек товаров")
-    public void isOpen(){
-       wait.until(ExpectedConditions.visibilityOfElementLocated(ADD_TO_CART_BUTTON ));
+    public ProductPage isOpen(){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(ADD_TO_CART_BUTTON ));
+        return this;
     }
 
     @Step("Открытие корзины")
